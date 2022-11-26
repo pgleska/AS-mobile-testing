@@ -1,0 +1,133 @@
+                                                                             Scan Report                                                                              
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┳━━━━┓
+┃ Analyzer    ┃ Description                                                   ┃ Severity ┃                                                          File ┃ Line ┃    ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━╇━━━━┩
+│ yara        │ Big_Numbers1                                                  │  Warning │                    app/src/main/res/mipmap-hdpi/note_icon.png │    1 │ ❌ │
+│ trufflehog3 │ GenericAPIKey                                                 │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  333 │ ❌ │
+│ semgrepjava │ The sensitive information may be valuable information on its  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  265 │ ❌ │
+│             │ own (such as a password), or it                               │          │                                                               │      │    │
+│             │ may be useful for launching other, more deadly attacks. If an │          │                                                               │      │    │
+│             │ attack fails, an attacker may use                             │          │                                                               │      │    │
+│             │ error information provided by the server to launch another    │          │                                                               │      │    │
+│             │ more focused attack. For example, an                          │          │                                                               │      │    │
+│             │ attempt to exploit a path traversal weakness (CWE-22) might   │          │                                                               │      │    │
+│             │ yield the full pathname of the                                │          │                                                               │      │    │
+│             │ installed application.                                        │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ Cryptographic keys should not be kept in the source code. The │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   47 │ ❌ │
+│             │ source code can be widely shared                              │          │                                                               │      │    │
+│             │ in an enterprise environment, and is certainly shared in open │          │                                                               │      │    │
+│             │ source. To be managed safely,                                 │          │                                                               │      │    │
+│             │ passwords and secret keys should be stored in separate        │          │                                                               │      │    │
+│             │ configuration files or keystores.                             │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ The method identified is susceptible to injection. The input  │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ManageFo… │   58 │ ❌ │
+│             │ should be validated and properly                              │          │                                                               │      │    │
+│             │ escaped.                                                      │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ This specific mode of CBC with PKCS5Padding is susceptible to │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  237 │ ❌ │
+│             │ padding oracle attacks. An                                    │          │                                                               │      │    │
+│             │ adversary could potentially decrypt the message if the system │          │                                                               │      │    │
+│             │ exposed the difference between                                │          │                                                               │      │    │
+│             │ plaintext with invalid padding or valid padding. The          │          │                                                               │      │    │
+│             │ distinction between valid and invalid                         │          │                                                               │      │    │
+│             │ padding is usually revealed through distinct error messages   │          │                                                               │      │    │
+│             │ being returned for each condition.                            │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ Cryptographic keys should not be kept in the source code. The │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  106 │ ❌ │
+│             │ source code can be widely shared                              │          │                                                               │      │    │
+│             │ in an enterprise environment, and is certainly shared in open │          │                                                               │      │    │
+│             │ source. To be managed safely,                                 │          │                                                               │      │    │
+│             │ passwords and secret keys should be stored in separate        │          │                                                               │      │    │
+│             │ configuration files or keystores.                             │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ A file is opened to write to its contents. The filename comes │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  205 │ ❌ │
+│             │ from an input parameter. If an                                │          │                                                               │      │    │
+│             │ unfiltered parameter is passed to this file API, files at an  │          │                                                               │      │    │
+│             │ arbitrary filesystem location                                 │          │                                                               │      │    │
+│             │ could be modified. This rule identifies potential path        │          │                                                               │      │    │
+│             │ traversal vulnerabilities. In many                            │          │                                                               │      │    │
+│             │ cases, the constructed file path cannot be controlled by the  │          │                                                               │      │    │
+│             │ user.                                                         │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ semgrepjava │ A file is opened to read its content. The filename comes from │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  200 │ ❌ │
+│             │ an input parameter. If an                                     │          │                                                               │      │    │
+│             │ unfiltered parameter is passed to this file API, files from   │          │                                                               │      │    │
+│             │ an arbitrary filesystem location                              │          │                                                               │      │    │
+│             │ could be read. This rule identifies potential path traversal  │          │                                                               │      │    │
+│             │ vulnerabilities. In many cases,                               │          │                                                               │      │    │
+│             │ the constructed file path cannot be controlled by the user.   │          │                                                               │      │    │
+│             │                                                               │          │                                                               │      │    │
+│ pmd         │ Singleton is not thread safe                                  │  Warning │        app/src/main/java/com/example/xtremednotes/Config.java │   19 │ ❌ │
+│ pmd         │ Ensure that resources like this FileOutputStream object are   │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   96 │ ❌ │
+│             │ closed after use                                              │          │                                                               │      │    │
+│ pmd         │ New exception is thrown in catch block, original stack trace  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  294 │ ❌ │
+│             │ may be lost                                                   │          │                                                               │      │    │
+│ pmd         │ Unused import 'java.io.ByteArrayInputStream'                  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   12 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'frameLayout'.            │  Warning │ app/src/main/java/com/example/xtremednotes/activity/NotesNav… │   29 │ ❌ │
+│ pmd         │ Ensure that resources like this CipherOutputStream object are │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  315 │ ❌ │
+│             │ closed after use                                              │          │                                                               │      │    │
+│ pmd         │ Ensure that resources like this FileInputStream object are    │  Warning │        app/src/main/java/com/example/xtremednotes/Config.java │   38 │ ❌ │
+│             │ closed after use                                              │          │                                                               │      │    │
+│ pmd         │ Unused import 'android.util.Log'                              │  Warning │        app/src/main/java/com/example/xtremednotes/Config.java │    4 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'passwordFile'.           │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ImportAc… │   28 │ ❌ │
+│ pmd         │ This for loop can be replaced by a foreach loop               │  Warning │ app/src/main/java/com/example/xtremednotes/fragment/ListAllN… │  181 │ ❌ │
+│ pmd         │ Unused import 'java.nio.ByteBuffer'                           │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   19 │ ❌ │
+│ pmd         │ Perhaps 'toolbar' could be replaced by a local variable.      │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   43 │ ❌ │
+│ pmd         │ Unused import 'org.junit.Assert.*'                            │  Warning │ app/src/androidTest/java/com/example/xtremednotes/ExampleIns… │   11 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'menu'.                   │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   51 │ ❌ │
+│ pmd         │ Unused import 'java.io.BufferedOutputStream'                  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   11 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'exportName'.             │  Warning │ app/src/main/java/com/example/xtremednotes/activity/NotesNav… │   33 │ ❌ │
+│ pmd         │ This final field could be made static                         │  Warning │ app/src/main/java/com/example/xtremednotes/activity/Password… │   20 │ ❌ │
+│ pmd         │ Ensure that resources like this OutputStream object are       │  Warning │ app/src/main/java/com/example/xtremednotes/fragment/Settings… │   66 │ ❌ │
+│             │ closed after use                                              │          │                                                               │      │    │
+│ pmd         │ Unused import 'java.util.List'                                │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   36 │ ❌ │
+│ pmd         │ Unused import 'com.example.xtremednotes.Config'               │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   24 │ ❌ │
+│ pmd         │ Avoid unnecessary return statements                           │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │  195 │ ❌ │
+│ pmd         │ Unused import 'java.util.ArrayList'                           │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   34 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'selectedColor'.          │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   49 │ ❌ │
+│ pmd         │ 'catch' branch identical to 'NoSuchAlgorithmException' branch │  Warning │ app/src/main/java/com/example/xtremednotes/PasswordManagerV2… │   85 │ ❌ │
+│ pmd         │ Perhaps 'colorSpinner' could be replaced by a local variable. │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   52 │ ❌ │
+│ pmd         │ Perhaps 'tempDir' could be replaced by a local variable.      │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ImportAc… │   31 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'needsKey'.               │  Warning │ app/src/main/java/com/example/xtremednotes/fragment/Settings… │   38 │ ❌ │
+│ pmd         │ All methods are static.  Consider using a utility class       │  Warning │ app/src/main/java/com/example/xtremednotes/util/ConfigUtil.j… │   25 │ ❌ │
+│             │ instead. Alternatively, you could add a private constructor   │          │                                                               │      │    │
+│             │ or make the class abstract to silence this warning.           │          │                                                               │      │    │
+│ pmd         │ Unused import 'android.graphics.Color'                        │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   11 │ ❌ │
+│ pmd         │ Unused import 'java.util.Arrays'                              │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   26 │ ❌ │
+│ pmd         │ Unused import                                                 │  Warning │ app/src/androidTest/java/com/example/xtremednotes/ExampleIns… │    5 │ ❌ │
+│             │ 'androidx.test.platform.app.InstrumentationRegistry'          │          │                                                               │      │    │
+│ pmd         │ Avoid using implementation types like 'ArrayList'; use the    │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  278 │ ❌ │
+│             │ interface instead                                             │          │                                                               │      │    │
+│ pmd         │ Unused import 'android.content.Context'                       │  Warning │ app/src/androidTest/java/com/example/xtremednotes/ExampleIns… │    3 │ ❌ │
+│ pmd         │ Avoid unused private fields such as 'rawKey'.                 │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   43 │ ❌ │
+│ pmd         │ A switch statement does not contain a break                   │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │  205 │ ❌ │
+│ pmd         │ Unused import 'android.annotation.SuppressLint'               │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │    7 │ ❌ │
+│ pmd         │ Unused import 'org.junit.Test'                                │  Warning │ app/src/androidTest/java/com/example/xtremednotes/ExampleIns… │    8 │ ❌ │
+│ pmd         │ Unused import 'android.content.Intent'                        │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ManageFo… │   11 │ ❌ │
+│ pmd         │ Unused import 'java.io.BufferedInputStream'                   │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   10 │ ❌ │
+│ pmd         │ Unused import 'java.io.File'                                  │  Warning │ app/src/main/java/com/example/xtremednotes/util/FileUtil.java │    5 │ ❌ │
+│ pmd         │ Ensure that resources like this InputStream object are closed │  Warning │ app/src/main/java/com/example/xtremednotes/fragment/Settings… │   65 │ ❌ │
+│             │ after use                                                     │          │                                                               │      │    │
+│ pmd         │ Unused import 'android.widget.ArrayAdapter'                   │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ManageFo… │   14 │ ❌ │
+│ pmd         │ A class which only has private constructors should be final   │  Warning │        app/src/main/java/com/example/xtremednotes/Config.java │   12 │ ❌ │
+│ pmd         │ Return an empty collection rather than null.                  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   68 │ ❌ │
+│ pmd         │ Unused import 'java.util.Base64'                              │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │   37 │ ❌ │
+│ pmd         │ The JUnit 4 test method name 'addition_isCorrect' doesn't     │  Warning │ app/src/test/java/com/example/xtremednotes/ExampleUnitTest.j… │   14 │ ❌ │
+│             │ match '*'                                                     │          │                                                               │      │    │
+│ pmd         │ Useless parentheses.                                          │  Warning │ app/src/main/java/com/example/xtremednotes/activity/EditNote… │  208 │ ❌ │
+│ pmd         │ Unused import 'java.util.Optional'                            │  Warning │ app/src/main/java/com/example/xtremednotes/util/VerifyUtil.j… │    4 │ ❌ │
+│ pmd         │ Unused import 'java.util.Objects'                             │  Warning │ app/src/main/java/com/example/xtremednotes/fragment/ListAllN… │   44 │ ❌ │
+│ pmd         │ Substitute calls to size() == 0 (or size() != 0, size() > 0,  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  305 │ ❌ │
+│             │ size() < 1) with calls to isEmpty()                           │          │                                                               │      │    │
+│ pmd         │ This statement should have braces                             │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  296 │ ❌ │
+│ pmd         │ Unused import 'java.util.Collection'                          │  Warning │ app/src/main/java/com/example/xtremednotes/util/ConfigUtil.j… │   19 │ ❌ │
+│ pmd         │ Position literals first in String comparisons                 │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  157 │ ❌ │
+│ pmd         │ Unused import 'java.util.concurrent.Callable'                 │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │   27 │ ❌ │
+│ pmd         │ Useless qualified this usage in the same class.               │  Warning │ app/src/main/java/com/example/xtremednotes/activity/ManageFo… │  154 │ ❌ │
+│ pmd         │ Ensure that resources like this CipherInputStream object are  │  Warning │ app/src/main/java/com/example/xtremednotes/EncryptedFileMana… │  259 │ ❌ │
+│             │ closed after use                                              │          │                                                               │      │    │
+└─────────────┴───────────────────────────────────────────────────────────────┴──────────┴───────────────────────────────────────────────────────────────┴──────┴────┘
+Note: Issues include findings accross all revisions i.e it can be that you have fixed it in your latest revision, but the finding will still appear here (for the 
+affected revision)
+

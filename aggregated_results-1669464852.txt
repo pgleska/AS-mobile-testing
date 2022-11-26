@@ -1,0 +1,12 @@
+#############################################
+Start of  /home/pitu/studia/as-mob/testing/XtremeDnotes//git_report_result.txt
+#############################################
+fatal: detected dubious ownership in repository at '/app'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /app
+#############################################
+End of  /home/pitu/studia/as-mob/testing/XtremeDnotes//git_report_result.txt
+#############################################
+
+

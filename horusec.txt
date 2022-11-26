@@ -1,0 +1,564 @@
+ pitu@pitu-os:~/studia/as-mob/testing/XtremeDnotes$ horusec start -p .
+WARN[0000] {HORUSEC_CLI} Config file not found          
+WARN[0000] {HORUSEC_CLI} When starting the analysis WE SKIP A TOTAL OF 111 FILES that are not considered to be analyzed. To see more details use flag --log-level=debug 
+
+WARN[0000] Horusec will return a timeout after 600 seconds. This time can be customized in the cli settings. 
+
+WARN[0000] {HORUSEC_CLI} PLEASE DON'T REMOVE ".horusec" FOLDER BEFORE THE ANALYSIS FINISH! Don’t worry, we’ll remove it after the analysis ends automatically! Project sent to folder in location: [/home/pitu/studia/as-mob/testing/XtremeDnotes/.horusec/dc53c542-420a-4116-8ac0-350866f067e9] 
+
+
+
+==================================================================================
+
+HORUSEC ENDED THE ANALYSIS WITH STATUS OF "success" AND WITH THE FOLLOWING RESULTS:
+
+==================================================================================
+
+Analysis StartedAt: 2022-11-26 14:26:39
+Analysis FinishedAt: 2022-11-26 14:26:50
+
+==================================================================================
+
+Language: Leaks
+Severity: CRITICAL
+Line: 430
+Column: 397
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/.checkmate/db.sqlite
+Code: APIKey", "file": "app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java", "line": 333
+RuleID: HS-LEAKS-25
+Type: Vulnerability
+ReferenceHash: 6e68f0818723a02003e01afe46c6464aa1b11b40c567ed035b58548760a32168
+Details: (1/1) * Possible vulnerability detected: Potential Hard-coded credential
+The software contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data. For more information checkout the CWE-798 (https://cwe.mitre.org/data/definitions/798.html) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 35
+Column: 21
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+RuleID: HS-JAVA-110
+Type: Vulnerability
+ReferenceHash: 0a4f4ac482b30dad2eb547ae59fa940c854e2c02102bffc60dd37757791aec4a
+Details: (1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function
+A weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 35
+Column: 21
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+RuleID: HS-JAVA-110
+Type: Vulnerability
+ReferenceHash: 0a4f4ac482b30dad2eb547ae59fa940c854e2c02102bffc60dd37757791aec4a
+Details: (1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function
+A weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 15
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.BadPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 459cf0ac75823c319eecb57e2ffe0da8ac96df61504e70f66065424aaaae6046
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 16
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.Cipher;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 7b33111b73094e8d1212550f23b0a0680cf5011784b1d94382da3ca103e77b02
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 17
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.IllegalBlockSizeException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 3854c66bd04e20348fc1f573dadecc753bab5a9b3730356eca6140227a8005c1
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 18
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 6c522fb1dcfad492785dc82379f2021cfaad4e096030dd7e8a2fcdca991f408b
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 19
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 9e2ce5219dce34b76c486bb15cbe917a303889b7d0196d897250d06df57d623e
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 20
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.spec.IvParameterSpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 56a69a2e5366d0643b29e586d6e3eb2e70d0d0c44502a5e485a1d6b263bef09e
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 21
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: import javax.crypto.spec.SecretKeySpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: c7581575bbecd4cfba4b892616d7c6d9d42fbd176d9468e6431683b0b82245ea
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 53
+Column: 22
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV1.java
+Code: if (Arrays.equals(tmp, hash)) {
+RuleID: HS-JAVA-145
+Type: Vulnerability
+ReferenceHash: 6b5a91d3c4db42ac01b43c252d8b42ae38aff819852eadc9f0e21f95aeae423e
+Details: (1/1) * Possible vulnerability detected: Unsafe hash equals
+An attacker might be able to detect the value of the secret hash due to the exposure of comparison timing. When the functions Arrays.equals() or String.equals() are called, they will exit earlier if fewer bytes are matched. For more information checkout the CWE-704 (https://cwe.mitre.org/data/definitions/704.html) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 58
+Column: 33
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/activity/ImportActivity.java
+Code: tempDir = getDir("temp", Context.MODE_PRIVATE);
+RuleID: HS-JAVA-113
+Type: Vulnerability
+ReferenceHash: 06f55f8dc638239350dc89f4fe0f276d57d5a9c2203c96048fbe62d96187c53b
+Details: (1/1) * Possible vulnerability detected: Sensitive Information Not Encrypted
+App can write to App Directory. Sensitive Information should be encrypted. For more information checkout the CWE-276 (https://cwe.mitre.org/data/definitions/276.html) advisory.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 20
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/activity/ImportActivity.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 14e20b2fbd5b90fc6edc8ed39fe5819967c9b47d4f3c0af4a366794c2bf0a280
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 21
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/activity/ImportActivity.java
+Code: import javax.crypto.spec.SecretKeySpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: f46d08a7a9ef701241dda80ed28da8dace7b7c8f777ae42cb4981bca1a293ae7
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 237
+Column: 21
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+RuleID: HS-JAVA-110
+Type: Vulnerability
+ReferenceHash: c106ec315d9e5a1c109a87fc73f70e1d1444f96ecfc29032bb6df44ec32c5081
+Details: (1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function
+A weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 237
+Column: 21
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+RuleID: HS-JAVA-110
+Type: Vulnerability
+ReferenceHash: c106ec315d9e5a1c109a87fc73f70e1d1444f96ecfc29032bb6df44ec32c5081
+Details: (1/1) * Possible vulnerability detected: Weak block mode for Cryptographic Hash Function
+A weak ECB, (a.k.a 'block mode') was found in one of your Ciphers. Always use a strong, high entropy hash, for example the SHA-512 with salt options. For more information check CWE-327 (https://cwe.mitre.org/data/definitions/327.html), CWE-719 (https://cwe.mitre.org/data/definitions/719.html), CWE-326 (https://cwe.mitre.org/data/definitions/326.html) and CWE-780 (https://cwe.mitre.org/data/definitions/780.html) for deeper details on how to fix it.
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 33
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.Cipher;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: fea5a7e07a3787e8fb05698ba62e2365637ca7265acfdd186c96cfa53d34847a
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 34
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.CipherInputStream;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: a382f6bf434ab5a29dfd1797bee42deaf58e236cf6ea1cdf9f8856bb0ccd8880
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 35
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.CipherOutputStream;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: ef3ec8ef0e6a543946509f6f7a0c6a0a81b608eec52836de2ec9bd73fc63ed51
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 36
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.NoSuchPaddingException;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: ca11d1119dce2fae9070a4b779c524a91e38ba2c8f321d0b82ea6c5b4b40a7b9
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 37
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.SecretKey;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: cce745f6f729ffa87cb90808bc66ea290389e7f119d5ee6e06a27c27d2629f4f
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 38
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.spec.IvParameterSpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: 4bada72d9072869865355d848edc5882438dccb6b26bce7441507d72852f765c
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: HIGH
+Line: 39
+Column: 7
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: import javax.crypto.spec.SecretKeySpec;
+RuleID: HS-JAVA-123
+Type: Vulnerability
+ReferenceHash: e4e4cff7737f9fdaf0721b2509854dd8658176ff86ff72261c77bb9c1cc3be49
+Details: (1/1) * Possible vulnerability detected:  Crypto import
+ Crypto import
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 95
+Column: 34
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/util/ConfigUtil.java
+Code: return Base64.getEncoder().encodeToString(string.getBytes()).replace("/", "_");
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: ddd3f699dfdee1c8d360da32a5d96d5fbb93742ea4f61f8c9f61da5c0d966e05
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 58
+Column: 34
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/util/FileUtil.java
+Code: oString(tokens[0].getBytes(StandardCharsets.UTF_8)).replace("/", "_") + "." + tokens[1];
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: 32eb8f6dab9fdf4633d8e30be546d10fccd0f22017d248e989de2c9b37c38aa0
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 41
+Column: 54
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: cipher.init(mode, sk, new IvParameterSpec(new byte[16]));
+RuleID: HS-JAVA-78
+Type: Vulnerability
+ReferenceHash: 2899be4e0e8e8481334f7e8fb7c8db719f13e1776aa5d3f912dc943d74879d93
+Details: (1/1) * Possible vulnerability detected: Static IV
+Initialization vector must be regenerated for each message to be encrypted. For more information checkout the CWE-329 (https://cwe.mitre.org/data/definitions/329.html) advisory
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 65
+Column: 44
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: String b64 = Base64.getEncoder().encodeToString(enc2);
+RuleID: HS-JVM-38
+Type: Vulnerability
+ReferenceHash: 05453edd514323dff1b0880a872f24bae4f0f8ed4976198b2cf610d61341a5f5
+Details: (1/1) * Possible vulnerability detected: Base64 Encode
+Basic authentication's only means of obfuscation is Base64 encoding. Since Base64 encoding is easily recognized and reversed, it offers only the thinnest veil of protection to your users, and should not be used.
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 85
+Column: 20
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/fragment/SettingsFragment.java
+Code: SharedPreferences.Editor edit = sharedPref.edit();
+RuleID: HS-JAVA-126
+Type: Vulnerability
+ReferenceHash: f73df9e148464473fa7dd8f3c7d7a01f7c815853daca5f6c9708189a0dcffdb1
+Details: (1/1) * Possible vulnerability detected: Local File I/O Operations
+Local File I/O Operations
+
+==================================================================================
+
+Language: Java
+Severity: MEDIUM
+Line: 63
+Column: 29
+SecurityTool: HorusecEngine
+Confidence: MEDIUM
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/EncryptedFileManager.java
+Code: byte[] ivBytes = new byte[16];
+RuleID: HS-JAVA-78
+Type: Vulnerability
+ReferenceHash: d9e364cd631e015a14e9f6937c3b95221daef6051097c7bbd36567abd135c8a3
+Details: (1/1) * Possible vulnerability detected: Static IV
+Initialization vector must be regenerated for each message to be encrypted. For more information checkout the CWE-329 (https://cwe.mitre.org/data/definitions/329.html) advisory
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 99
+Column: 49
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/util/ConfigUtil.java
+Code: byte[] decodedBytes = Base64.getDecoder().decode(string.replace("_", "/"));
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: fe9945117d4b77f397a1040f4cc1df0e8ae32ef40d9e7e22622d201422060ab7
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 20
+Column: 33
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/util/FileUtil.java
+Code: String s = URLDecoder.decode(uri.toString(), StandardCharsets.UTF_8.name());
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: d1ce8f3ab352527acb35604c777fef1330226010af590bb08a342ec881a988d0
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 50
+Column: 45
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/util/FileUtil.java
+Code: tokens[0].replace("_", "/")), StandardCharsets.UTF_8) + "." + tokens[1];
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: 224cf75e0099a82a8de06c8ded096593cf0a5e48c39b3fce0d12a5e32a73da3f
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+Language: Java
+Severity: LOW
+Line: 55
+Column: 33
+SecurityTool: HorusecEngine
+Confidence: LOW
+File: /home/pitu/studia/as-mob/testing/XtremeDnotes/app/src/main/java/com/example/xtremednotes/PasswordManagerV2.java
+Code: enc = Base64.getDecoder().decode(b64);
+RuleID: HS-JVM-24
+Type: Vulnerability
+ReferenceHash: 0b961a395431c5ab2c37d31bc7fc6d9dd2fae76e59f764c798fa9f572816cb79
+Details: (1/1) * Possible vulnerability detected: Base64 Decode
+Base64 Decode
+
+==================================================================================
+
+In this analysis, a total of 33 possible vulnerabilities were found and we classified them into:
+Total of Vulnerability CRITICAL is: 1
+Total of Vulnerability HIGH is: 22
+Total of Vulnerability MEDIUM is: 6
+Total of Vulnerability LOW is: 4
+
+==================================================================================
+
+
+WARN[0011] {HORUSEC_CLI} No authorization token was found, your code it is not going to be sent to horusec. Please enter a token with the -a flag to configure and save your analysis 
+
+WARN[0011] {HORUSEC_CLI} 33 VULNERABILITIES WERE FOUND IN YOUR CODE SENT TO HORUSEC, TO SEE MORE DETAILS USE THE LOG LEVEL AS DEBUG AND TRY AGAIN 
+
+WARN[0011] {HORUSEC_CLI} Horusec not show info vulnerabilities in this analysis, to see info vulnerabilities add option "--information-severity=true". For more details use (horusec start --help) command. 
+
