@@ -1,0 +1,70 @@
+ pitu@pitu-os:~/studia/as-mob/testing/benchmark$ m github:AS-Juliett/XtremeDnotes@master
+
+                                                                  🦄 Makes                                                                  
+                                                                v22.11-linux                                                                
+
+────────────────────────────────────────────── Fetching github:AS-Juliett/XtremeDnotes@master ──────────────────────────────────────────────
+
+Initialized empty Git repository in /tmp/makes-ty3vlx7s/.git/
+Cached from /home/pitu/.makes/cache/sources/github-AS-Juliett-XtremeDnotes-master
+remote: Enumerating objects: 169, done.
+remote: Counting objects: 100% (169/169), done.
+remote: Compressing objects: 100% (135/135), done.
+remote: Total 169 (delta 18), reused 169 (delta 18), pack-reused 0
+Receiving objects: 100% (169/169), 713.30 KiB | 50.95 MiB/s, done.
+Resolving deltas: 100% (18/18), done.
+From /home/pitu/.makes/cache/sources/github-AS-Juliett-XtremeDnotes-master
+ * [new branch]      master     -> master
+ * [new tag]         1.0.1      -> 1.0.1
+Switched to branch 'master'
+
+────────────────────────────────────────────────────── Building project configuration ──────────────────────────────────────────────────────
+
+/nix/store/l6wyz2zzzvqgv9ar8i22ps6ysyynr8r6-config.json
+
+──────────────────────────────────────────────── Building /secretsForAwsFromEnv/__default__ ────────────────────────────────────────────────
+
+/nix/store/ab3ixn91q721vyyqlc785k83ql55vqvb-make-template-for-make-secret-for-aws-from-env-for-__default__
+──────────────────────────────────────────────────────────────── Provenance ────────────────────────────────────────────────────────────────
+Attestation: /home/pitu/.makes/provenance-secretsForAwsFromEnv-__default__.json
+SHA-256: df3261761bfb6f9eea25c523232ae54c7cd53281d3f66b0cdb1b87e74078b9f5
+
+───────────────────────────────────────────────────────────────── Running ──────────────────────────────────────────────────────────────────
+
+# SPDX-FileCopyrightText: 2022 Fluid Attacks and Makes contributors
+#
+# SPDX-License-Identifier: MIT
+
+# shellcheck shell=bash
+
+function main {
+  local access_key_id_name='AWS_ACCESS_KEY_ID'
+  local default_region_name='AWS_DEFAULT_REGION'
+  local secret_access_key_name='AWS_SECRET_ACCESS_KEY'
+  local session_token_name='AWS_SESSION_TOKEN'
+
+  info Making secrets for AWS from environment variables for __default__: \
+    && require_env_var "${access_key_id_name}" \
+    && require_env_var "${secret_access_key_name}" \
+    && export AWS_ACCESS_KEY_ID="${!access_key_id_name}" \
+    && info - AWS_ACCESS_KEY_ID from "${access_key_id_name}" \
+    && export AWS_CONFIG_FILE \
+    && AWS_CONFIG_FILE="$(mktemp)" \
+    && info - AWS_CONFIG_FILE="${AWS_CONFIG_FILE}" \
+    && export AWS_DEFAULT_REGION="${!default_region_name:-us-east-1}" \
+    && info - AWS_DEFAULT_REGION="${AWS_DEFAULT_REGION}" \
+    && export AWS_SECRET_ACCESS_KEY="${!secret_access_key_name}" \
+    && info - AWS_SECRET_ACCESS_KEY from "${secret_access_key_name}" \
+    && export AWS_SESSION_TOKEN="${!session_token_name:-}" \
+    && info - AWS_SESSION_TOKEN from "${session_token_name}" \
+    && export AWS_SHARED_CREDENTIALS_FILE \
+    && AWS_SHARED_CREDENTIALS_FILE="$(mktemp)" \
+    && info - AWS_SHARED_CREDENTIALS_FILE="${AWS_SHARED_CREDENTIALS_FILE}"
+
+}
+
+main "${@}"
+
+
+─────────────────────────────────────────────────────────────── 🌟 Success! ────────────────────────────────────────────────────────────────
+
